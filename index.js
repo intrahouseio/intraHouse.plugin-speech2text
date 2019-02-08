@@ -8,7 +8,7 @@ const plugin = new Plugin();
 
 
 function parseResult(text) {
-  console.log(text);
+  plugin.setDeviceValue('speech2text', text)
 }
 
 function listen() {

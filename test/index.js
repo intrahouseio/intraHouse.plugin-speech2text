@@ -9,6 +9,7 @@ const params = {
   silence: '1.0',
   thresholdStart: '2.85',
   thresholdEnd: '3.0',
+  verbose: true,
 }
 
 const system = {
