@@ -1,0 +1,8 @@
+{
+    "id":"speech2text",
+    "description":"Speech to text plugin",
+    "activation": false,
+    "resources": false,
+    "cross": true,
+    "version":"0.0.1"
+}

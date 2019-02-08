@@ -1,0 +1,30 @@
+{
+  "id": "speech2text",
+  "description": "Speech to text plugin",
+  "gendevices": 0,
+  "single": 1,
+  "module": "index.js",
+  "params": [
+    {
+      "name": "type",
+      "note": "$Type",
+      "type": "autocomplete",
+      "data": [
+        {
+          "id": "witai",
+          "name": "Wit.ai STT"
+        }
+      ]
+    },
+    {
+      "name": "witai_token",
+      "note": "$WitaiToken",
+      "type": "STRING",
+      "visible": "data.type === 'witai'",
+      "val": ""
+    }
+  ],
+  "chpattern": [],
+  "genrules": {},
+  "commands": []
+}
