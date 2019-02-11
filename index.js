@@ -3,6 +3,7 @@ const request = require('request')
 
 const Plugin = require('./lib/plugin');
 const wit = require('./lib/wit');
+const yandex = require('./lib/yandex');
 
 const plugin = new Plugin();
 
@@ -14,7 +15,7 @@ function parseResult(text) {
 function listen() {
   const stream = rec.start(plugin.params);
   stream.on('end', listen);
-  stream.pipe(wit(parseResult))
+  stream.pipe(yandex(parseResult))
 }
 
 plugin.on('start', () => {
