@@ -1,5 +1,5 @@
 {
-  "Type": "Тип",
+  "Type": "Сервис распознавания голоса",
   "YandexToken": "Токен",
   "YandexLng": "Язык",
   "YandexSpeaker": "Голос",

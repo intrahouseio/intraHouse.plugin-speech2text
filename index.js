@@ -15,7 +15,18 @@ function parseResult(text) {
 function listen() {
   const stream = rec.start(plugin.params);
   stream.on('end', listen);
-  stream.pipe(yandex(parseResult))
+
+  switch (plugin.params.type) {
+    case 'yandex':
+      stream.pipe(yandex(parseResult, plugin.params));
+      break;
+    case 'wit':
+      stream.pipe(wit(parseResult, plugin.params));
+      break;
+    default:
+      stream.pipe(yandex(parseResult, plugin.params));
+      break;
+  }
 }
 
 plugin.on('start', () => {

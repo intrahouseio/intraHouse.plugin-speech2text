@@ -11,17 +11,58 @@
       "type": "autocomplete",
       "data": [
         {
-          "id": "witai",
-          "name": "Wit.ai STT"
+          "id": "wit",
+          "name": "Wit"
+        },
+        {
+          "id": "yandex",
+          "name": "Yandex"
         }
       ]
     },
     {
-      "name": "witai_token",
-      "note": "$WitaiToken",
+      "name": "wit_token",
+      "note": "$WitToken",
       "type": "STRING",
-      "visible": "data.type === 'witai'",
-      "val": ""
+      "visible": "data.type === 'wit'",
+      "val": "Z3WU2WUIXKIX4IBMDWTQIEZKD6DKI5CY"
+    },
+    {
+      "name": "yandex_token",
+      "note": "$YandexToken",
+      "type": "STRING",
+      "visible": "data.type === 'yandex'",
+      "val": "069b6659-984b-4c5f-880e-aaedcfd84102"
+    },
+    {
+      "name": "channels",
+      "note": "$Channels",
+      "type": "STRING",
+      "val": "1"
+    },
+    {
+      "name": "recordProgram",
+      "note": "$RecordProgram",
+      "type": "STRING",
+      "val": "rec"
+    },
+    {
+      "name": "silence",
+      "note": "$Silence",
+      "type": "STRING",
+      "val": "1.0"
+    },
+    {
+      "name": "thresholdStart",
+      "note": "$ThresholdStart",
+      "type": "STRING",
+      "val": "2.85"
+    },
+    {
+      "name": "thresholdEnd",
+      "note": "$ThresholdEnd",
+      "type": "STRING",
+      "val": "3.0"
     }
   ],
   "chpattern": [],
