@@ -1,10 +1,11 @@
 {
-  "Type": "Voice recognition service",
+  "Type": "Сервис распознавания голоса",
   "YandexToken": "Token",
-  "YandexLng": "Language",
-  "YandexSpeaker": "Speaker",
-  "YandexEmotion": "Emotion",
-  "CacheSize": "Cache size (Mbyte)",
-  "TestSay": "Test sound",
-  "ClearCache": "Clear cache"
+  "WitToken": "Token",
+  "Channels": "Channels",
+  "RecordProgram": "Record program",
+  "ThresholdStart": "Volume threshold to start recording",
+  "ThresholdEnd": "Volume threshold to end recording",
+  "Silence": "Period of silence to end recording (sec)",
+  "Recordtimeout": "Maximum recording time (sec)"
 }

@@ -47,12 +47,6 @@
       "val": "rec"
     },
     {
-      "name": "silence",
-      "note": "$Silence",
-      "type": "STRING",
-      "val": "1.0"
-    },
-    {
       "name": "thresholdStart",
       "note": "$ThresholdStart",
       "type": "STRING",
@@ -63,9 +57,25 @@
       "note": "$ThresholdEnd",
       "type": "STRING",
       "val": "3.0"
+    },
+    {
+      "name": "silence",
+      "note": "$Silence",
+      "type": "STRING",
+      "val": "1.5"
+    },
+    {
+      "name": "recordtimeout",
+      "note": "$Recordtimeout",
+      "type": "NUMBER",
+      "val": 10
     }
   ],
   "chpattern": [],
-  "genrules": {},
+  "genrules": {
+    "speech2text": {
+      "cl": "SensorA"
+    }
+  },
   "commands": []
 }

@@ -6,11 +6,12 @@ const unitid = 'speech2text'
 const params = {
   channels: 2,
   recordProgram: 'rec',
-  silence: '1.0',
+  silence: '1.5',
+  recordtimeout: 10,
   thresholdStart: '2.85',
   thresholdEnd: '3.0',
-  verbose: true,
-  type: 'yandex',
+  verbose: false,
+  type: 'wit',
   wit_token: 'Z3WU2WUIXKIX4IBMDWTQIEZKD6DKI5CY',
   yandex_token: '069b6659-984b-4c5f-880e-aaedcfd84102',
 }

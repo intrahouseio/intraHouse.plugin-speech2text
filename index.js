@@ -13,8 +13,21 @@ function parseResult(text) {
 }
 
 function listen() {
+  plugin.debug('Start Recording');
+  let timer = null;
   const stream = rec.start(plugin.params);
-  stream.on('end', listen);
+
+  stream.on('data', () => {
+    if (timer === null) {
+      plugin.debug('...recording');
+      timer = setTimeout(rec.stop, plugin.params.recordtimeout * 1000)
+    }
+  });
+  stream.on('end', () => {
+    plugin.debug('End Recording');
+    clearTimeout(timer);
+    listen();
+  });
 
   switch (plugin.params.type) {
     case 'yandex':
@@ -30,5 +43,6 @@ function listen() {
 }
 
 plugin.on('start', () => {
+  plugin.setChannels([{ id: 'speech2text', desc: 'speech2text' }]);
   listen();
 });
