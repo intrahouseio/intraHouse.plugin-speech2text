@@ -7,5 +7,16 @@
   "ThresholdStart": "Volume threshold to start recording",
   "ThresholdEnd": "Volume threshold to end recording",
   "Silence": "Period of silence to end recording (sec)",
-  "Recordtimeout": "Maximum recording time (sec)"
+  "Recordtimeout": "Maximum recording time (sec)",
+  "Mode": "Mode",
+  "Hotword": "Hotword",
+  "Noise": "Noise detector",
+  "File": "Hotword",
+  "Sensitivity": "Sensitivity",
+  "Audiogain": "Audio Gain",
+  "Applyfrontend": "Apply Frontend",
+  "Privet": "Privet",
+  "Dom": "Dom",
+  "Custom": "Custom",
+  "Path": "Path"
 }

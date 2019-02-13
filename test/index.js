@@ -14,6 +14,11 @@ const params = {
   type: 'wit',
   wit_token: 'Z3WU2WUIXKIX4IBMDWTQIEZKD6DKI5CY',
   yandex_token: '069b6659-984b-4c5f-880e-aaedcfd84102',
+  mode: 'hotword',
+  hw_sensitivity: '0.5',
+  hw_file: 'alisa',
+  hw_audiogain: '0.8',
+  hw_applyfrontend: false,
 }
 
 const system = {

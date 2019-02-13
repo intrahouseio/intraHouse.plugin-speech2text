@@ -6,6 +6,135 @@
   "module": "index.js",
   "params": [
     {
+      "name": "mode",
+      "note": "$Mode",
+      "type": "autocomplete",
+      "data": [
+        {
+          "id": "noise",
+          "name": "$Noise"
+        },
+        {
+          "id": "hotword",
+          "name": "$Hotword"
+        }
+      ]
+    },
+    {
+      "name": "hw_file",
+      "note": "$File",
+      "visible": "data.mode === 'hotword'",
+      "type": "autocomplete",
+      "data": [
+        {
+          "id": "intrahouse",
+          "name": "intraHouse"
+        },
+        {
+          "id": "dom",
+          "name": "$Dom"
+        },
+        {
+          "id": "privet",
+          "name": "$Privet"
+        },
+        {
+          "id": "hello",
+          "name": "Hello"
+        },
+        {
+          "id": "alexa",
+          "name": "Alexa"
+        },
+        {
+          "id": "alisa",
+          "name": "Alisa"
+        },
+        {
+          "id": "jarvis",
+          "name": "Jarvis"
+        },
+        {
+          "id": "google",
+          "name": "OK Google"
+        },
+        {
+          "id": "custom",
+          "name": "$Custom"
+        }
+      ]
+    },
+    {
+      "name": "hw_path",
+      "note": "$Path",
+      "visible": "data.mode === 'hotword' && data.hw_file === 'custom'",
+      "type": "STRING",
+      "val": "/var/lib/intrahouse-c/plugins/speech2text/models/jarvis.pmdl"
+    },
+    {
+      "name": "hw_sensitivity",
+      "note": "$Sensitivity",
+      "visible": "data.mode === 'hotword'",
+      "type": "STRING",
+      "val": "0.5"
+    },
+    {
+      "name": "hw_audiogain",
+      "note": "$Audiogain",
+      "visible": "data.mode === 'hotword'",
+      "type": "STRING",
+      "val": "0.8"
+    },
+    {
+      "name": "hw_applyfrontend",
+      "note": "$Applyfrontend",
+      "visible": "data.mode === 'hotword'",
+      "type": "cb",
+      "val": false
+    },
+    {
+      "name": "channels",
+      "note": "$Channels",
+      "visible": "data.mode === 'noise'",
+      "type": "STRING",
+      "val": "1"
+    },
+    {
+      "name": "recordProgram",
+      "note": "$RecordProgram",
+      "visible": "data.mode === 'noise'",
+      "type": "STRING",
+      "val": "rec"
+    },
+    {
+      "name": "thresholdStart",
+      "note": "$ThresholdStart",
+      "visible": "data.mode === 'noise'",
+      "type": "STRING",
+      "val": "2.85"
+    },
+    {
+      "name": "thresholdEnd",
+      "note": "$ThresholdEnd",
+      "visible": "data.mode === 'noise'",
+      "type": "STRING",
+      "val": "3.0"
+    },
+    {
+      "name": "silence",
+      "note": "$Silence",
+      "visible": "data.mode === 'noise'",
+      "type": "STRING",
+      "val": "1.5"
+    },
+    {
+      "name": "recordtimeout",
+      "note": "$Recordtimeout",
+      "visible": "data.mode === 'noise'",
+      "type": "NUMBER",
+      "val": 10
+    },
+    {
       "name": "type",
       "note": "$Type",
       "type": "autocomplete",
@@ -33,42 +162,6 @@
       "type": "STRING",
       "visible": "data.type === 'yandex'",
       "val": "069b6659-984b-4c5f-880e-aaedcfd84102"
-    },
-    {
-      "name": "channels",
-      "note": "$Channels",
-      "type": "STRING",
-      "val": "1"
-    },
-    {
-      "name": "recordProgram",
-      "note": "$RecordProgram",
-      "type": "STRING",
-      "val": "rec"
-    },
-    {
-      "name": "thresholdStart",
-      "note": "$ThresholdStart",
-      "type": "STRING",
-      "val": "2.85"
-    },
-    {
-      "name": "thresholdEnd",
-      "note": "$ThresholdEnd",
-      "type": "STRING",
-      "val": "3.0"
-    },
-    {
-      "name": "silence",
-      "note": "$Silence",
-      "type": "STRING",
-      "val": "1.5"
-    },
-    {
-      "name": "recordtimeout",
-      "note": "$Recordtimeout",
-      "type": "NUMBER",
-      "val": 10
     }
   ],
   "chpattern": [],
